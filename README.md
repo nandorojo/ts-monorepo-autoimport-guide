@@ -1,4 +1,4 @@
-# Taming TypeScript autoimport in a monorepo
+# Taming VSCode's autoimports in a TypeScript monorepo
 
 ## Context
 
