@@ -68,7 +68,11 @@ Then, type the package you want to install/update.
 
 When it asks you which packages you want to put it in, check each one.
 
-For every package that isn't an app (i.e. in your subpackages), select `devDependency`. If you're using an open source project, this may be different, so you should know what kind of dependency it is. But if you're just using a monorepo for an internal app for organization purposes, `devDependency` should be fine.
+Select `devDependency` if you're installing in one of your subpackages. Select `dependency` if you're installing in your main app folder. (This might not actually matter; I think it's fine to pick `dependency` for both. But I've been doing it that way.)
+
+### Open source libraries
+
+If your monorepo is for an open source library, you might not want to make the dependency a devDependency. So you should know what kind of dependency it is. But if you're just using a monorepo for an internal app for organization purposes, `devDependency` should be fine.
 
 ## Confirm it worked 🤵‍♂️
 
