@@ -34,7 +34,7 @@ You can also add a convenience `plus`/`p` script to your root `package.json` to 
 ```json
 {
   "workspaces": ["packages/*", "apps/*"],
-  "scripts": { "plus": "lernaupdate", "p": "lernaupdate" }
+  "scripts": { "plus": "yarn lernaupdate --lazy", "p": "yarn lernaupdate --lazy" }
 }
 ```
 
@@ -43,6 +43,20 @@ And use it like so:
 ```sh
 yarn plus
 # wait for the prompt to ask you which package(s)
+```
+
+## Example
+
+Say you want to install `solito` in both `packages/app` and `apps/next`. Do this:
+
+```
+yarn plus
+
+# search solito click enter
+
+# select the app folder and the next-app folder
+
+# mark them both as dependencies
 ```
 
 ## Install or update a package 🤖
