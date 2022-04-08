@@ -45,11 +45,11 @@ yarn plus
 # wait for the prompt to ask you which package(s)
 ```
 
-## Example
+## Example 🧮
 
 Say you want to install `solito` in both `packages/app` and `apps/next`. Do this:
 
-```
+```sh
 yarn plus
 
 # search solito click enter
