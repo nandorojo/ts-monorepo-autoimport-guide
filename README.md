@@ -12,6 +12,8 @@ Below is a workflow that manages this for you with ease, without having clashing
 
 ## Instructions ✅
 
+First, install `lerna-update-wizard`. Don't be fooled by the name. You don't need lerna for it. This package will let you install a single NPM package across multiple monorepo packages, while maintaining the same version. This ensures that you get autocomplete wherever you need it, without struggling with mismatched versions.
+
 ```sh
 yarn add -D -W lerna-update-wizard
 ```
