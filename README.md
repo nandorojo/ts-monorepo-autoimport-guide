@@ -13,20 +13,7 @@ Below is a workflow that manages this for you with ease, without having clashing
 ## Instructions ✅
 
 ```sh
-yarn add -D -W lerna
 yarn add -D -W lerna-update-wizard
-yarn lerna init
-```
-
-Add this in `lerna.json`:
-
-```json
-{
-  "packages": ["packages/*", "apps/*"],
-  "version": "0.0.0",
-  "npmClient": "yarn",
-  "useWorkspaces": true
-}
 ```
 
 This setup assumes we have a layout like this:
@@ -34,9 +21,7 @@ This setup assumes we have a layout like this:
 - `packages/`
 - `apps/`
 
-Adjust the `packages` field in `lerna.json` to match your folders.
-
-Same goes for the `package.json` in the root of your repo:
+Your `package.json` in the root of your monorepo should have `workspaces`:
 
 ```json
 {
@@ -44,7 +29,7 @@ Same goes for the `package.json` in the root of your repo:
 }
 ```
 
-You can also add a convenience script to your root `package.json` to install packages:
+You can also add a convenience `plus`/`p` script to your root `package.json` to install packages:
 
 ```json
 {
@@ -57,7 +42,7 @@ And use it like so:
 
 ```sh
 yarn plus
-# wait for the prompt to ask you which package
+# wait for the prompt to ask you which package(s)
 ```
 
 ## Install or update a package 🤖
@@ -68,7 +53,7 @@ Then, type the package you want to install/update.
 
 When it asks you which packages you want to put it in, check each one.
 
-Select `devDependency` if you're installing in one of your subpackages. Select `dependency` if you're installing in your main app folder. (This might not actually matter; I think it's fine to pick `dependency` for both. But I've been doing it that way.)
+Select whether the item is a `dependency` or `devDependency`. You should set the same one for each package you add it to.
 
 ### Open source libraries
 
